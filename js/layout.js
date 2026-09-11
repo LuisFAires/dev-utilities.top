@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="/" class="${window.location.pathname === '/' ? 'active' : ''}">Home</a>
             <a href="/uniqid-decoder/" class="${window.location.pathname.includes('/uniqid-decoder') ? 'active' : ''}">PHP uniqid() Decoder</a>
           <a href="/csv-to-sql-in/" class="${window.location.pathname.includes('/csv-to-sql-in') ? 'active' : ''}">Excel/CSV to SQL IN</a>
+            <a href="/php-serialized-to-json/" class="${window.location.pathname.includes('/php-serialized-to-json') ? 'active' : ''}">PHP Serialized to JSON</a>
         </nav>
     `;
 
