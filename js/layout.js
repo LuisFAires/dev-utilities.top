@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="/php-serialized-to-json/" class="${window.location.pathname.includes('/php-serialized-to-json') ? 'active' : ''}">PHP Serialized to JSON</a>
             <a href="/pdo-connection-string-builder/" class="${window.location.pathname.includes('/pdo-connection-string-builder') ? 'active' : ''}">PDO Connection Builder</a>
             <a href="/env-to-docker-environment/" class="${window.location.pathname.includes('/env-to-docker-environment') ? 'active' : ''}">.env to Docker YAML</a>
+            <a href="/regex-escaper/" class="${window.location.pathname.includes('/regex-escaper') ? 'active' : ''}">Regex Escaper</a>
         </nav>
     `;
 

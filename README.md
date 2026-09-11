@@ -9,3 +9,4 @@ A collection of free developer tools that run entirely in the browser. Published
 - **PHP Serialized to JSON Converter**: decodes PHP serialized data into formatted JSON.
 - **PDO Connection String Builder**: generates ready-to-use PHP PDO connection code for MySQL, PostgreSQL, and SQLite.
 - **.env to Docker Environment YAML**: converts environment variables into a Docker Compose-ready YAML block.
+- **Regex Escaper for Literal Strings**: escapes special regex characters to match exact text.

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Escaper for Literal Strings Online | Dev Utilities</title>
+    <meta name="description" content="Escape special regex characters in any literal string instantly. Paste text and copy a safe regular expression pattern.">
+    <link rel="canonical" href="https://dev-utilities.top/regex-escaper/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dev Utilities">
+    <meta property="og:title" content="Regex Escaper for Literal Strings Online">
+    <meta property="og:description" content="Escape special regex characters and create a pattern that matches literal text.">
+    <meta property="og:url" content="https://dev-utilities.top/regex-escaper/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Regex Escaper for Literal Strings Online">
+    <meta name="twitter:description" content="Escape special regex characters and create a pattern that matches literal text.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Regex Escaper for Literal Strings",
+            "url": "https://dev-utilities.top/regex-escaper/",
+            "description": "Free online tool to escape literal strings for use in regular expressions.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4327628330003063"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div class="main-container">
+        <main>
+            <h1>Regex Escaper for Literal Strings</h1>
+            <p class="subtitle">Escape special characters to match an exact string in a regular expression.</p>
+
+            <div class="tool-container">
+                <label class="field-label" for="literal-input">Literal string</label>
+                <textarea id="literal-input" rows="6" placeholder="[array_name]($var)" spellcheck="false"></textarea>
+                <label class="field-label" for="regex-output">Escaped regex pattern</label>
+                <textarea id="regex-output" rows="6" readonly aria-live="polite" spellcheck="false"></textarea>
+                <button id="copy-output" type="button" disabled>Copy Regex</button>
+            </div>
+
+            <div class="ad-slot" id="ad-placeholder-1"><span>Advertisement</span></div>
+
+            <article>
+                <h2>Escape text for a regular expression</h2>
+                <p>Regular expressions use characters such as periods, brackets, parentheses, and question marks as syntax. When you need to search for those characters exactly, they must be escaped so the regex engine treats them as ordinary text.</p>
+                <p>Paste a literal string into this tool to generate an escaped pattern immediately. For example, <code>[array_name]($var)</code> becomes <code>\[array_name\]\(\$var\)</code>, which matches that exact text instead of a character class or capture group.</p>
+
+                <h2>When literal matching is useful</h2>
+                <p>Literal patterns are helpful when searching source code, log entries, user input, file paths, or generated identifiers. Escaping the input avoids accidental wildcard matching and makes the pattern safe to combine with other regex components.</p>
+                <p>The converter handles the standard regex metacharacters: backslashes, carets, dollar signs, periods, asterisks, plus signs, question marks, parentheses, square brackets, braces, and pipes. Characters without a special regex meaning are kept unchanged.</p>
+
+                <h2>Use the output in your language</h2>
+                <p>The result is a regex pattern, not a language-specific string literal. When placing it in JavaScript, PHP, Python, or another language, you may need to escape backslashes once more according to that language's string syntax.</p>
+            </article>
+
+            <div class="ad-slot" id="ad-placeholder-2"><span>Advertisement</span></div>
+        </main>
+    </div>
+    <script src="../js/layout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
