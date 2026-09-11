@@ -60,13 +60,26 @@
                 <button id="copy-output" type="button" disabled>Copy SQL</button>
             </div>
 
+            <div class="ad-slot" id="ad-placeholder-1">
+                <span>Advertisement</span>
+            </div>
+
             <article>
                 <h2>Convert a column to SQL</h2>
                 <p>Paste a single column copied from Excel, Google Sheets, or a CSV file. Empty cells are ignored, and the result is formatted for use in a SQL <code>WHERE id IN (...)</code> query.</p>
+                <p>The tool also handles tab-separated rows copied directly from a spreadsheet. When multiple columns are pasted, it reads the first column from each row, which makes it convenient to extract an ID list from a larger table.</p>
 
                 <h2>How values are formatted</h2>
                 <p>Use single quotes for text values, double quotes when your database convention requires them, or no quotes for numeric IDs. Quotes inside values are escaped for SQL automatically.</p>
+                <p>For example, a column containing <code>101</code>, <code>102</code>, and <code>103</code> becomes <code>IN (101, 102, 103)</code> with quotes disabled. Text values are commonly formatted as <code>IN ('alpha', 'beta')</code>.</p>
+
+                <h2>Use the generated clause safely</h2>
+                <p>The generated output is intended for quick manual queries and debugging. For application code, prefer parameterized queries instead of concatenating values into SQL, as parameters provide stronger protection against SQL injection.</p>
             </article>
+
+            <div class="ad-slot" id="ad-placeholder-2">
+                <span>Advertisement</span>
+            </div>
         </main>
     </div>
 
