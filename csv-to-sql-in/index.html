@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel/CSV Column to SQL IN Generator | Dev Utilities</title>
+    <meta name="description" content="Convert an Excel or CSV column into a SQL IN clause instantly. Paste values, choose quoting, and copy the formatted result.">
+    <link rel="canonical" href="https://dev-utilities.top/csv-to-sql-in/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dev Utilities">
+    <meta property="og:title" content="Excel/CSV Column to SQL IN Generator">
+    <meta property="og:description" content="Convert a pasted Excel or CSV column into a SQL IN clause instantly.">
+    <meta property="og:url" content="https://dev-utilities.top/csv-to-sql-in/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Excel/CSV Column to SQL IN Generator">
+    <meta name="twitter:description" content="Convert a pasted Excel or CSV column into a SQL IN clause instantly.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Excel/CSV Column to SQL IN Generator",
+            "url": "https://dev-utilities.top/csv-to-sql-in/",
+            "description": "Free online tool to convert an Excel or CSV column into a SQL IN clause.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div class="main-container">
+        <main>
+            <h1>Excel/CSV to SQL IN Generator</h1>
+            <p class="subtitle">Paste a column from Excel or CSV and get a SQL-ready <code>IN (...)</code> clause.</p>
+
+            <div class="tool-container">
+                <label class="field-label" for="values-input">Column values</label>
+                <textarea id="values-input" rows="10" placeholder="101&#10;102&#10;103" spellcheck="false"></textarea>
+                <div class="tool-options">
+                    <label class="field-label" for="quote-style">Quote values</label>
+                    <select id="quote-style">
+                        <option value="single">Single quotes</option>
+                        <option value="double">Double quotes</option>
+                        <option value="none">No quotes</option>
+                    </select>
+                    <span id="value-count" class="value-count">0 values</span>
+                </div>
+                <label class="field-label" for="sql-output">SQL output</label>
+                <textarea id="sql-output" rows="6" readonly aria-live="polite" spellcheck="false"></textarea>
+                <button id="copy-output" type="button" disabled>Copy SQL</button>
+            </div>
+
+            <article>
+                <h2>Convert a column to SQL</h2>
+                <p>Paste a single column copied from Excel, Google Sheets, or a CSV file. Empty cells are ignored, and the result is formatted for use in a SQL <code>WHERE id IN (...)</code> query.</p>
+
+                <h2>How values are formatted</h2>
+                <p>Use single quotes for text values, double quotes when your database convention requires them, or no quotes for numeric IDs. Quotes inside values are escaped for SQL automatically.</p>
+            </article>
+        </main>
+    </div>
+
+    <script src="../js/layout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

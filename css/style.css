@@ -115,6 +115,75 @@ input[type="text"]:focus {
   border-color: var(--accent);
 }
 
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-color);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  border-radius: 8px;
+  font: 0.95rem 'JetBrains Mono', monospace;
+  outline: none;
+}
+
+textarea {
+  display: block;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tool-options {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  column-gap: 16px;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.tool-options .field-label {
+  grid-column: 1;
+}
+
+.tool-options select {
+  grid-column: 1;
+}
+
+.value-count {
+  grid-column: 2;
+  grid-row: 2;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 12px 18px;
+  background: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  color: #121212;
+  cursor: pointer;
+  font: 600 0.9rem 'Inter', sans-serif;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -230,5 +299,20 @@ article pre code {
 
   .results-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tool-options {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-options .field-label,
+  .tool-options select,
+  .value-count {
+    grid-column: 1;
+  }
+
+  .value-count {
+    grid-row: auto;
+    margin-top: 10px;
   }
 }
