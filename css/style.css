@@ -150,7 +150,7 @@ select:focus {
   display: grid;
   grid-template-columns: minmax(180px, 260px) 1fr;
   column-gap: 16px;
-  align-items: end;
+  align-items: center;
   margin-bottom: 20px;
 }
 
