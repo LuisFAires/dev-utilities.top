@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP uniqid() Decoder & Timestamp Converter Online | Dev Utilities</title>
+    <meta name="description" content="Free online tool to decode PHP uniqid(), extract the Unix Timestamp, and convert it to UTC and Local Time instantly.">
+    <link rel="canonical" href="https://dev-utilities.top/uniqid-decoder/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dev Utilities">
+    <meta property="og:title" content="PHP uniqid() Decoder & Timestamp Converter Online">
+    <meta property="og:description" content="Decode PHP uniqid(), extract its Unix timestamp, and convert it to UTC or local time instantly.">
+    <meta property="og:url" content="https://dev-utilities.top/uniqid-decoder/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PHP uniqid() Decoder & Timestamp Converter Online">
+    <meta name="twitter:description" content="Decode PHP uniqid(), extract its Unix timestamp, and convert it to UTC or local time instantly.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PHP uniqid() Decoder",
+            "url": "https://dev-utilities.top/uniqid-decoder/",
+            "description": "Free online tool to decode PHP uniqid(), extract the Unix timestamp, and convert it to UTC and local time.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Preconnect to Google Fonts for code-like fonts if desired -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar injected via layout.js -->
+    <div id="sidebar-container"></div>
+    
+    <div class="main-container">
+
+    <main>
+        <h1>PHP uniqid() Decoder</h1>
+        <p class="subtitle">Extract the timestamp and decode any PHP uniqid() instantly.</p>
+        
+        <div class="tool-container">
+            <input type="text" id="uniqid-input" placeholder="Paste PHP uniqid here (e.g. 65f012ab34c5d)" autocomplete="off" spellcheck="false">
+            <div id="error-message" class="error">Invalid uniqid format. Please enter a valid 13 or 23 character ID.</div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-label">Unix Timestamp</div>
+                    <div class="result-value" id="res-timestamp">-</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">UTC Date (ISO)</div>
+                    <div class="result-value" id="res-utc">-</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-label">Local Time</div>
+                    <div class="result-value" id="res-local">-</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ad-slot" id="ad-placeholder-1">
+            <!-- Google AdSense Code Goes Here -->
+            <!-- e.g., <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXX" data-ad-slot="YYYYYY" data-ad-format="auto"></ins> -->
+            <span>Advertisement (AdSense placeholder)</span>
+        </div>
+
+        <article>
+            <h2>What is a PHP uniqid()?</h2>
+            <p>The <code>uniqid()</code> function in PHP generates a unique identifier based on the current time in microseconds. Unlike UUIDs (Universal Unique Identifiers), which are generated securely and randomly, a standard PHP uniqid is strictly tied to the exact server time when the function was executed.</p>
+            
+            <h2>How does the uniqid to timestamp conversion work?</h2>
+            <p>A standard PHP uniqid (without any custom prefixes) consists of 13 hexadecimal characters. The secret to decoding it lies in the first 8 characters. These represent the exact <strong>Unix Timestamp</strong> (in seconds) converted into hexadecimal format. The remaining 5 characters represent the microseconds.</p>
+            <p>By extracting these first 8 characters and converting them from base-16 (hexadecimal) to base-10 (decimal), you extract the exact Unix epoch timestamp. Once you have the Unix timestamp, it can be easily converted into UTC or your local timezone.</p>
+            
+            <h2>How to decode uniqid in PHP</h2>
+            <p>If you want to decode a uniqid directly in your backend PHP application, you can use the following snippet:</p>
+            <pre><code>&lt;?php
+$id = "65f012ab34c5d";
+
+// Extract the first 8 characters
+$hexTime = substr($id, 0, 8);
+
+// Convert from hexadecimal to decimal
+$timestamp = hexdec($hexTime);
+
+// Print the formatted date
+echo date('Y-m-d H:i:s', $timestamp);
+?&gt;</code></pre>
+        </article>
+    </main>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/layout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
