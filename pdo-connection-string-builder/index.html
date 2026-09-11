@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDO Connection String Builder for PHP | Dev Utilities</title>
+    <meta name="description" content="Build PHP PDO DSN connection strings for MySQL, PostgreSQL, and SQLite. Fill in your database settings and copy ready-to-use PHP code.">
+    <link rel="canonical" href="https://dev-utilities.top/pdo-connection-string-builder/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dev Utilities">
+    <meta property="og:title" content="PDO Connection String Builder for PHP">
+    <meta property="og:description" content="Generate ready-to-use PHP PDO connection code for MySQL, PostgreSQL, and SQLite.">
+    <meta property="og:url" content="https://dev-utilities.top/pdo-connection-string-builder/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PDO Connection String Builder for PHP">
+    <meta name="twitter:description" content="Generate ready-to-use PHP PDO connection code for MySQL, PostgreSQL, and SQLite.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PDO Connection String Builder",
+            "url": "https://dev-utilities.top/pdo-connection-string-builder/",
+            "description": "Free online tool to generate PHP PDO connection strings for MySQL, PostgreSQL, and SQLite.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4327628330003063"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div class="main-container">
+        <main>
+            <h1>PDO Connection String Builder</h1>
+            <p class="subtitle">Build a PHP PDO connection for MySQL, PostgreSQL, or SQLite.</p>
+
+            <div class="tool-container">
+                <div class="form-grid">
+                    <div>
+                        <label class="field-label" for="driver">Database driver</label>
+                        <select id="driver">
+                            <option value="mysql">MySQL</option>
+                            <option value="pgsql">PostgreSQL</option>
+                            <option value="sqlite">SQLite</option>
+                        </select>
+                    </div>
+                    <div class="network-field">
+                        <label class="field-label" for="host">Host</label>
+                        <input id="host" type="text" value="localhost" autocomplete="off">
+                    </div>
+                    <div class="network-field">
+                        <label class="field-label" for="port">Port</label>
+                        <input id="port" type="text" value="3306" inputmode="numeric" autocomplete="off">
+                    </div>
+                    <div class="network-field">
+                        <label class="field-label" for="database">Database name</label>
+                        <input id="database" type="text" value="database" autocomplete="off">
+                    </div>
+                    <div id="charset-field">
+                        <label class="field-label" for="charset">Character set</label>
+                        <input id="charset" type="text" value="utf8mb4" autocomplete="off">
+                    </div>
+                    <div id="sqlite-path-field" hidden>
+                        <label class="field-label" for="sqlite-path">Database file path</label>
+                        <input id="sqlite-path" type="text" value="/path/to/database.sqlite" autocomplete="off">
+                    </div>
+                    <div class="credentials-field">
+                        <label class="field-label" for="username">Username</label>
+                        <input id="username" type="text" value="root" autocomplete="username">
+                    </div>
+                    <div class="credentials-field">
+                        <label class="field-label" for="password">Password</label>
+                        <input id="password" type="password" placeholder="password" autocomplete="current-password">
+                    </div>
+                </div>
+                <label class="field-label" for="php-output">PHP code</label>
+                <textarea id="php-output" rows="7" readonly aria-live="polite" spellcheck="false"></textarea>
+                <button id="copy-output" type="button">Copy PHP</button>
+            </div>
+
+            <div class="ad-slot" id="ad-placeholder-1"><span>Advertisement</span></div>
+
+            <article>
+                <h2>What is a PDO DSN?</h2>
+                <p>A PDO data source name, or DSN, tells PHP which database driver to use and where the database is located. It is passed as the first argument when creating a <code>PDO</code> connection.</p>
+                <p>Each database uses a slightly different DSN format. MySQL commonly includes a host, port, database name, and character set, while PostgreSQL uses host, port, and database name. SQLite connections point to a local database file.</p>
+
+                <h2>Build connection code quickly</h2>
+                <p>Select your database driver and enter the relevant settings. The generator updates the DSN and complete PHP connection snippet as you type, ready to copy into a project or test script.</p>
+                <p>For MySQL, using <code>utf8mb4</code> is recommended because it supports the full range of UTF-8 characters. The generated code also sets exception mode so connection and query errors can be handled clearly.</p>
+
+                <h2>Keep credentials out of source code</h2>
+                <p>The values entered here stay in your browser. In a production application, store credentials in environment variables or a secret manager instead of committing them directly to a repository.</p>
+            </article>
+
+            <div class="ad-slot" id="ad-placeholder-2"><span>Advertisement</span></div>
+        </main>
+    </div>
+    <script src="../js/layout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
