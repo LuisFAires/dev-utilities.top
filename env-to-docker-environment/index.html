@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.env to Docker Compose Environment YAML Converter | Dev Utilities</title>
+    <meta name="description" content="Convert .env files into Docker Compose environment YAML instantly. Paste environment variables and copy a safe, formatted YAML block.">
+    <link rel="canonical" href="https://dev-utilities.top/env-to-docker-environment/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dev Utilities">
+    <meta property="og:title" content=".env to Docker Compose Environment YAML Converter">
+    <meta property="og:description" content="Convert .env variables into a Docker Compose environment YAML block instantly.">
+    <meta property="og:url" content="https://dev-utilities.top/env-to-docker-environment/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content=".env to Docker Compose Environment YAML Converter">
+    <meta name="twitter:description" content="Convert .env variables into a Docker Compose environment YAML block instantly.">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": ".env to Docker Environment YAML Converter",
+            "url": "https://dev-utilities.top/env-to-docker-environment/",
+            "description": "Free online tool to convert .env files into Docker Compose environment YAML.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4327628330003063"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="sidebar-container"></div>
+    <div class="main-container">
+        <main>
+            <h1>.env to Docker Environment YAML</h1>
+            <p class="subtitle">Convert environment variables into a Docker Compose-ready <code>environment</code> block.</p>
+
+            <div class="tool-container">
+                <label class="field-label" for="env-input">.env file contents</label>
+                <textarea id="env-input" rows="10" placeholder="APP_ENV=production&#10;DB_HOST=database&#10;DB_PASSWORD=secret" spellcheck="false"></textarea>
+                <span id="variable-count" class="value-count">0 variables</span>
+                <label class="field-label" for="yaml-output">Docker Compose YAML</label>
+                <textarea id="yaml-output" rows="10" readonly aria-live="polite" spellcheck="false"></textarea>
+                <button id="copy-output" type="button" disabled>Copy YAML</button>
+            </div>
+
+            <div class="ad-slot" id="ad-placeholder-1"><span>Advertisement</span></div>
+
+            <article>
+                <h2>Convert .env files for Docker Compose</h2>
+                <p>An <code>.env</code> file stores configuration as <code>KEY=value</code> pairs. Docker Compose can use those values directly, but its <code>environment</code> section has a YAML structure that is inconvenient to type for a long list of variables.</p>
+                <p>Paste your variables into this converter to generate an <code>environment:</code> block ready for a <code>docker-compose.yml</code> or <code>compose.yaml</code> file. Each value is safely quoted as a YAML string.</p>
+
+                <h2>How the YAML output works</h2>
+                <p>The output uses Docker Compose list syntax, such as <code>- &quot;APP_ENV=production&quot;</code>. This format keeps the variable name and value together and avoids YAML interpreting colons, hashes, spaces, or boolean-like values unexpectedly.</p>
+                <p>Comments from the original file are kept in the generated block. Empty lines and invalid lines are skipped, while quoted .env values are normalized before they are written to the YAML output.</p>
+
+                <h2>Handle secrets carefully</h2>
+                <p>Conversion happens entirely in your browser and no content is sent to a server. Still, avoid committing passwords, tokens, and private keys to version control; use Docker secrets, an ignored environment file, or a deployment secret manager for production credentials.</p>
+            </article>
+
+            <div class="ad-slot" id="ad-placeholder-2"><span>Advertisement</span></div>
+        </main>
+    </div>
+    <script src="../js/layout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
