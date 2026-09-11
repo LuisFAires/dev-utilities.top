@@ -190,6 +190,14 @@ button:disabled {
   gap: 20px;
 }
 
+.results-grid > a {
+  display: flex !important;
+}
+
+.results-grid > a > .tool-container {
+  flex: 1;
+}
+
 .result-card {
   background: var(--bg-color);
   padding: 20px;
